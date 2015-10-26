@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABQ-YZ-Ue7">
+                                <rect key="frame" x="20" y="20" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="PW7-rv-Fm3"/>
+                                </constraints>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEe-js-fqZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letter to guess!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JX8-pH-j9d">
+                                <rect key="frame" x="78" y="382" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="6sa-1a-Tlv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvB-He-MwC">
+                                <rect key="frame" x="437" y="383" width="46" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="4ee-Zu-Qed"/>
+                                    <constraint firstAttribute="width" constant="46" id="AI9-dR-D5i"/>
+                                </constraints>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ciX-WG-eCs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-GE-s9c">
+                                <rect key="frame" x="78" y="315" width="361" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="sjk-b8-gxW"/>
+                                    <constraint firstAttribute="height" constant="47" id="yfC-AH-CBx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word to Guess:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-wT-bZf">
+                                <rect key="frame" x="78" y="286" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="psT-jU-94I"/>
+                                    <constraint firstAttribute="height" constant="21" id="xuf-vx-dt9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fat-O6-x3v">
+                                <rect key="frame" x="78" y="462" width="288" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="NCX-xz-USn"/>
+                                    <constraint firstAttribute="width" constant="288" id="f6I-Q3-OnG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Guesses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzh-3p-IhX">
+                                <rect key="frame" x="78" y="425" width="166" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Eff-qb-ohR"/>
+                                    <constraint firstAttribute="width" constant="166" id="ePj-GK-WjI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="WSO-Yx-f1u">
+                                <rect key="frame" x="215" y="70" width="170" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="a0s-Yk-s6g"/>
+                                    <constraint firstAttribute="height" constant="191" id="u9j-ZZ-hhl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Iph-GE-s9c" firstAttribute="top" secondItem="WSO-Yx-f1u" secondAttribute="bottom" constant="54" id="26e-SO-zGD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ABQ-YZ-Ue7" secondAttribute="leading" id="3C6-05-Q8P"/>
+                            <constraint firstItem="Iph-GE-s9c" firstAttribute="top" secondItem="y0S-wT-bZf" secondAttribute="bottom" constant="8" id="8zE-Up-K8I"/>
+                            <constraint firstItem="WSO-Yx-f1u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9s3-wi-RVc"/>
+                            <constraint firstItem="ABQ-YZ-Ue7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Cff-Cf-vMJ"/>
+                            <constraint firstItem="dvB-He-MwC" firstAttribute="top" secondItem="WSO-Yx-f1u" secondAttribute="bottom" constant="122" id="FU6-Ub-YJH"/>
+                            <constraint firstItem="JX8-pH-j9d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="Hol-fl-kCX"/>
+                            <constraint firstItem="WSO-Yx-f1u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="ING-Eu-utN"/>
+                            <constraint firstItem="hzh-3p-IhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="Naa-Pq-0Uy"/>
+                            <constraint firstItem="Iph-GE-s9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="OkI-53-xLY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dvB-He-MwC" secondAttribute="trailing" constant="97" id="abq-cO-zUv"/>
+                            <constraint firstItem="fat-O6-x3v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="esu-E5-YYw"/>
+                            <constraint firstItem="hzh-3p-IhX" firstAttribute="top" secondItem="JX8-pH-j9d" secondAttribute="bottom" constant="13" id="heM-ZZ-ynF"/>
+                            <constraint firstItem="y0S-wT-bZf" firstAttribute="top" secondItem="WSO-Yx-f1u" secondAttribute="bottom" constant="25" id="kVv-Ch-uVt"/>
+                            <constraint firstItem="y0S-wT-bZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="roA-DC-kjM"/>
+                            <constraint firstItem="ABQ-YZ-Ue7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wyK-5u-K5Y"/>
+                            <constraint firstItem="JX8-pH-j9d" firstAttribute="top" secondItem="Iph-GE-s9c" secondAttribute="bottom" constant="20" id="xk9-Cc-X9b"/>
+                            <constraint firstItem="fat-O6-x3v" firstAttribute="top" secondItem="hzh-3p-IhX" secondAttribute="bottom" constant="16" id="yVv-t8-EzH"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="enterText" destination="JX8-pH-j9d" id="8dw-jo-MFQ"/>
+                        <outlet property="image" destination="WSO-Yx-f1u" id="DM6-gv-TzJ"/>
+                        <outlet property="matchedLetters" destination="Iph-GE-s9c" id="3Qv-id-S2r"/>
+                        <outlet property="previousGuess" destination="fat-O6-x3v" id="5Gt-M4-NcG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hangman1.gif" width="100" height="100"/>
+    </resources>
+</document>
