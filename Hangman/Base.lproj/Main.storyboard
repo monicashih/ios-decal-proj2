@@ -35,17 +35,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvB-He-MwC">
-                                <rect key="frame" x="437" y="383" width="46" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="4ee-Zu-Qed"/>
-                                    <constraint firstAttribute="width" constant="46" id="AI9-dR-D5i"/>
-                                </constraints>
-                                <state key="normal" title="Guess"/>
-                                <connections>
-                                    <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ciX-WG-eCs"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-GE-s9c">
                                 <rect key="frame" x="78" y="315" width="361" height="47"/>
                                 <constraints>
@@ -93,6 +82,28 @@
                                     <constraint firstAttribute="height" constant="191" id="u9j-ZZ-hhl"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJA-OT-rHW">
+                                <rect key="frame" x="496" y="28" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SW2-sE-Ha1"/>
+                                    <constraint firstAttribute="width" constant="84" id="ttK-Ns-Frr"/>
+                                </constraints>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6j-6x-I4Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvB-He-MwC">
+                                <rect key="frame" x="437" y="383" width="46" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="4ee-Zu-Qed"/>
+                                    <constraint firstAttribute="width" constant="46" id="AI9-dR-D5i"/>
+                                </constraints>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ciX-WG-eCs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,8 +117,10 @@
                             <constraint firstItem="WSO-Yx-f1u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="ING-Eu-utN"/>
                             <constraint firstItem="hzh-3p-IhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="Naa-Pq-0Uy"/>
                             <constraint firstItem="Iph-GE-s9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="OkI-53-xLY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AJA-OT-rHW" secondAttribute="trailing" id="S8f-Rm-LPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dvB-He-MwC" secondAttribute="trailing" constant="97" id="abq-cO-zUv"/>
                             <constraint firstItem="fat-O6-x3v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="esu-E5-YYw"/>
+                            <constraint firstItem="AJA-OT-rHW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gIi-ag-8wj"/>
                             <constraint firstItem="hzh-3p-IhX" firstAttribute="top" secondItem="JX8-pH-j9d" secondAttribute="bottom" constant="13" id="heM-ZZ-ynF"/>
                             <constraint firstItem="y0S-wT-bZf" firstAttribute="top" secondItem="WSO-Yx-f1u" secondAttribute="bottom" constant="25" id="kVv-Ch-uVt"/>
                             <constraint firstItem="y0S-wT-bZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="roA-DC-kjM"/>
